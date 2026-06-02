@@ -1,31 +1,24 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Image from 'next/image';
+import { useState } from 'react';
 
-const capabilities = [
-  {
-    title: 'Natural Language Understanding',
-    description: 'Comprehends context, idioms, and emotional nuance in conversation',
-    metrics: '99.2% accuracy',
-  },
-  {
-    title: 'Emotional Recognition',
-    description: 'Detects emotional states through voice, text, and visual cues',
-    metrics: '15+ emotions',
-  },
-  {
-    title: 'Real-time Learning',
-    description: 'Adapts behavior and preferences through continuous interaction',
-    metrics: '24/7 learning',
-  },
-  {
-    title: 'Predictive Assistance',
-    description: 'Anticipates needs before they are explicitly stated',
-    metrics: '87% accuracy',
-  },
+const previewImages = [
+  { id: 1, src: '/preview-1.png', alt: 'Face Detection Interface' },
+  { id: 2, src: '/preview-2.png', alt: 'Face Learning Mode' },
+  { id: 3, src: '/preview-3.png', alt: 'Voice Command Interface' },
+  { id: 4, src: '/preview-4.png', alt: 'Object Detection Tracking' },
+  { id: 5, src: '/preview-5.png', alt: 'Robot in Action' },
+  { id: 6, src: '/preview-6.png', alt: 'Face Learning Database' },
+  { id: 7, src: '/preview-7.png', alt: 'Object Classification' },
+  { id: 8, src: '/preview-8.png', alt: 'System Architecture' },
+  { id: 9, src: '/preview-9.png', alt: 'Control Dashboard' },
 ];
 
 export function AICapabilities() {
+  const [hoveredId, setHoveredId] = useState<number | null>(null);
+
   return (
     <section className="py-20 px-4 relative overflow-hidden">
       <div className="max-w-7xl mx-auto">
@@ -36,38 +29,47 @@ export function AICapabilities() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl sm:text-5xl font-bold text-white mb-4">
-            AI Capabilities
+            Preview Pics
           </h2>
-          <p className="text-gray-300 text-lg max-w-2xl mx-auto">
-            Experience the next generation of artificial intelligence
-          </p>
         </motion.div>
 
-        {/* Timeline-style layout */}
-        <div className="space-y-8">
-          {capabilities.map((cap, index) => (
+        {/* Image Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {previewImages.map((image) => (
             <motion.div
-              key={index}
-              initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-              className={`flex items-center gap-8 ${index % 2 === 1 ? 'flex-row-reverse' : ''}`}
+              key={image.id}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: image.id * 0.05 }}
+              onMouseEnter={() => setHoveredId(image.id)}
+              onMouseLeave={() => setHoveredId(null)}
+              className="relative overflow-hidden rounded-lg border border-purple-500/30 glass-dark cursor-pointer"
             >
-              {/* Connector */}
-              <div className="hidden lg:flex flex-col items-center gap-4 w-20">
-                <div className="w-1 h-12 bg-gradient-to-b from-purple-500 to-pink-500" />
-                <div className="w-4 h-4 bg-purple-500 rounded-full ring-4 ring-slate-950" />
-                <div className="w-1 h-12 bg-gradient-to-b from-pink-500 to-purple-500" />
-              </div>
-
-              {/* Content */}
-              <div className="flex-1 glass-dark p-6 rounded-lg border border-white/10">
-                <div className="flex items-start justify-between mb-2">
-                  <h3 className="text-xl font-semibold text-white">{cap.title}</h3>
-                  <span className="text-sm font-semibold text-purple-400">{cap.metrics}</span>
-                </div>
-                <p className="text-gray-400">{cap.description}</p>
-              </div>
+              <motion.div
+                animate={{
+                  scale: hoveredId === image.id ? 1.1 : 1,
+                }}
+                transition={{ duration: 0.3 }}
+                className="relative w-full h-64"
+              >
+                <Image
+                  src={image.src}
+                  alt={image.alt}
+                  fill
+                  className="object-cover"
+                />
+              </motion.div>
+              
+              {/* Overlay on hover */}
+              <motion.div
+                animate={{
+                  opacity: hoveredId === image.id ? 1 : 0,
+                }}
+                transition={{ duration: 0.2 }}
+                className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-4"
+              >
+                <p className="text-white text-sm font-semibold">{image.alt}</p>
+              </motion.div>
             </motion.div>
           ))}
         </div>
