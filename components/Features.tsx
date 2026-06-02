@@ -1,44 +1,32 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Brain, Mic, Lightbulb, Eye, Zap, Heart } from 'lucide-react';
+import { Brain, Mic, Eye, Move3d } from 'lucide-react';
 
 const features = [
   {
+    icon: Eye,
+    title: 'Face Detection',
+    description: 'Advanced facial recognition with real-time detection and identification of multiple faces simultaneously',
+    gradient: 'from-cyan-500 to-blue-500',
+  },
+  {
     icon: Brain,
-    title: 'Advanced Neural Network',
-    description: 'Powered by next-generation AI algorithms for natural conversation and learning',
+    title: 'Instant Face Learning',
+    description: 'Rapidly learns and remembers new faces with minimal training samples for personalized recognition',
     gradient: 'from-purple-500 to-pink-500',
   },
   {
     icon: Mic,
-    title: 'Voice Interaction',
-    description: 'Natural language processing with real-time response and emotional tone detection',
+    title: 'Natural Language Understanding',
+    description: 'Intelligent voice command processing with contextual understanding and semantic analysis',
     gradient: 'from-pink-500 to-red-500',
   },
   {
-    icon: Lightbulb,
-    title: 'Adaptive Learning',
-    description: 'Nova learns your preferences and adapts behavior over time for personalized experience',
-    gradient: 'from-yellow-500 to-orange-500',
-  },
-  {
-    icon: Eye,
-    title: 'Computer Vision',
-    description: 'Real-time visual recognition and object detection capabilities',
-    gradient: 'from-cyan-500 to-blue-500',
-  },
-  {
-    icon: Zap,
-    title: '48-Hour Battery',
-    description: 'Extended runtime with fast-charging capability and power-efficient architecture',
+    icon: Move3d,
+    title: 'Object Detection & Tracking',
+    description: 'Real-time identification and precise tracking of objects with continuous spatial awareness',
     gradient: 'from-green-500 to-emerald-500',
-  },
-  {
-    icon: Heart,
-    title: 'Emotional Intelligence',
-    description: 'Understands and responds to your emotions with appropriate supportive interactions',
-    gradient: 'from-rose-500 to-pink-500',
   },
 ];
 
@@ -74,10 +62,10 @@ export function Features() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl sm:text-5xl font-bold text-white mb-4 balance-text">
-            Powerful Features
+            Core Capabilities
           </h2>
           <p className="text-gray-300 text-lg max-w-2xl mx-auto balance-text">
-            Nova combines cutting-edge AI technology with thoughtful design to create the ultimate robotic companion
+            Whisper-bot combines advanced computer vision and natural language processing for intelligent interaction
           </p>
         </motion.div>
 
@@ -86,7 +74,7 @@ export function Features() {
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+          className="grid grid-cols-1 md:grid-cols-2 gap-6"
         >
           {features.map((feature, index) => {
             const Icon = feature.icon;

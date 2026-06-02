@@ -7,8 +7,8 @@ const _geist = Geist({ subsets: ["latin"] });
 const _geistMono = Geist_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: 'Nova - AI Robotic Puppy',
-  description: 'Meet Nova, an advanced AI-powered robotic puppy with emotional intelligence, voice interaction, and adaptive learning capabilities.',
+  title: 'Whisper-bot - AI Vision & Voice Assistant',
+  description: 'Whisper-bot: An intelligent AI assistant with face detection, instant face learning, natural language understanding, and advanced object detection and tracking.',
   generator: 'v0.app',
   icons: {
     icon: [

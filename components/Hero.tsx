@@ -29,7 +29,7 @@ export function Hero() {
               className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-dark w-fit"
             >
               <Sparkles className="w-4 h-4 text-purple-400" />
-              <span className="text-sm text-purple-300">Introducing Nova v1.0</span>
+              <span className="text-sm text-purple-300">Internship Project 2026</span>
             </motion.div>
 
             <motion.h1
@@ -39,7 +39,7 @@ export function Hero() {
               className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white balance-text leading-tight"
             >
               Meet{' '}
-              <span className="gradient-text">Nova</span>
+              <span className="gradient-text">Whisper-bot</span>
             </motion.h1>
 
             <motion.p
@@ -48,20 +48,17 @@ export function Hero() {
               transition={{ delay: 0.4 }}
               className="text-lg sm:text-xl text-gray-300 max-w-md balance-text leading-relaxed"
             >
-              Your AI-powered robotic companion with emotional intelligence, voice interaction, and adaptive learning. Nova doesn&apos;t just respond—she understands.
+              An intelligent AI vision and voice assistant with advanced face detection, instant face learning, natural language understanding, and real-time object tracking.
             </motion.p>
           </div>
 
-          {/* CTA Buttons */}
+          {/* CTA Button */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5 }}
             className="flex flex-wrap gap-4 pt-4"
           >
-            <button className="px-8 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg hover:shadow-lg hover:scale-105 transition-all glow-purple duration-300">
-              Pre-order Now
-            </button>
             <button className="px-8 py-3 border border-purple-400 text-purple-300 font-semibold rounded-lg hover:bg-purple-500/10 transition-all duration-300">
               Watch Demo
             </button>
