@@ -45,6 +45,15 @@ export function Hero() {
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.35 }}
+              className="text-base sm:text-lg text-purple-300 max-w-2xl balance-text leading-relaxed font-semibold"
+            >
+              An intelligent AI powered vision and voice assisted bionic dog robot with advanced face detection, instant face learning, natural language understanding, real-time object tracking to spread AI awareness among school kids
+            </motion.p>
+
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 }}
               className="text-lg sm:text-xl text-gray-300 max-w-md balance-text leading-relaxed"
             >
