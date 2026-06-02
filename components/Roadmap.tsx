@@ -61,20 +61,20 @@ export function Roadmap() {
             >
               {/* Image */}
               {item.image && (
-                <div className="relative w-full h-48 mb-4 rounded-lg overflow-hidden border border-purple-500/30">
+                <div className="relative w-full h-80 mb-4 rounded-lg overflow-hidden border border-purple-500/30">
                   <Image
                     src={item.image}
                     alt={item.title}
                     fill
-                    className="object-cover"
+                    className="object-contain bg-gradient-to-b from-slate-800 to-slate-900"
                   />
                 </div>
               )}
 
               {/* Status Badge */}
               <div className="mb-4 flex items-center gap-2">
-                <Circle className="w-5 h-5 text-purple-400" />
-                <span className="text-sm font-semibold text-purple-400">Pre-designed & Assembled</span>
+                <CheckCircle2 className="w-5 h-5 text-green-400" />
+                <span className="text-sm font-semibold text-green-400">Pre-designed & Assembled</span>
               </div>
 
               {/* Version */}
