@@ -5,27 +5,27 @@ import { motion } from 'framer-motion';
 const specs = [
   {
     category: 'Processor',
-    items: ['Octa-core AI processor', '8GB RAM', 'Neural Engine with 16-core GPU'],
+    items: ['Raspberry Pi 4B', 'BCM2711B0 64-bit 4 cores', '4GB RAM'],
   },
   {
-    category: 'Connectivity',
-    items: ['5G/4G LTE', 'WiFi 6E', 'Bluetooth 5.3', 'NFC compatible'],
-  },
-  {
-    category: 'Battery',
-    items: ['48-hour runtime', '30-minute fast charge', 'Solar charging capable'],
+    category: 'Controller',
+    items: ['ESP32 DOWDQ6-v3', 'Motion control', 'Real-time processing'],
   },
   {
     category: 'Sensors',
-    items: ['4K dual cameras', 'LiDAR scanner', 'Thermal sensor', '360° microphone array'],
+    items: ['5MP wide angle camera', 'ICM20948 9-axis sensor', 'Gyroscope & Accelerometer'],
   },
   {
     category: 'Materials',
-    items: ['Aircraft-grade aluminum', 'Medical-grade silicone', 'Scratch-resistant glass'],
+    items: ['Aluminium alloy body', 'PA12 nylon side panel', 'Durable construction'],
   },
   {
-    category: 'Dimensions',
-    items: ['12" height', '3 lbs weight', 'IP68 water resistant'],
+    category: 'AI Capabilities',
+    items: ['Face detection & recognition', 'Object detection & tracking', 'Voice command processing'],
+  },
+  {
+    category: 'Power & Connectivity',
+    items: ['USB-C charging', 'WiFi enabled', 'Bluetooth support'],
   },
 ];
 
@@ -62,7 +62,7 @@ export function TechSpecs() {
             Technical Specifications
           </h2>
           <p className="text-gray-300 text-lg max-w-2xl mx-auto">
-            Built with premium components and cutting-edge technology
+            Powered by advanced AI processors and precision sensors for real-time vision and voice processing
           </p>
         </motion.div>
 
