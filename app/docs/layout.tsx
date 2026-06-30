@@ -13,7 +13,9 @@ import {
   Bluetooth, 
   Terminal,
   ArrowLeft,
-  AlertTriangle
+  AlertTriangle,
+  Eye,
+  Target
 } from 'lucide-react';
 
 const docNavigation = [
@@ -22,7 +24,9 @@ const docNavigation = [
   { name: 'STT & Normalization', href: '/docs/stt-normalization', icon: Mic },
   { name: 'Intent Classification', href: '/docs/intent-classification', icon: GitMerge },
   { name: 'RAG & Gemma3 SLM', href: '/docs/rag-slm', icon: BrainCircuit },
-  { name: 'CNN Digit Visualizer', href: '/docs/lenet-visualizer', icon: Activity },
+  { name: 'LeNet5 CNN Visualizer', href: '/docs/lenet-visualizer', icon: Activity },
+  { name: 'Face Learning & Detection', href: '/docs/face-learning-detection', icon: Eye },
+  { name: 'Colored Ball Following', href: '/docs/colored-ball-following', icon: Target },
   { name: 'Bluetooth Integration', href: '/docs/bluetooth-speaker', icon: Bluetooth },
   { name: 'API Reference', href: '/docs/api-reference', icon: Terminal },
   { name: 'Troubleshooting & Debug', href: '/docs/debug', icon: AlertTriangle },

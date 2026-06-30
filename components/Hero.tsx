@@ -79,7 +79,7 @@ export function Hero() {
           <div className="absolute w-[60%] h-[60%] bg-cyan-500/20 rounded-full blur-3xl animate-pulse pointer-events-none" style={{ animationDelay: '1s' }} />
 
           {/* Seamless Blended Video Wrapper */}
-          <div 
+          <div
             className="w-full aspect-video relative z-10 overflow-hidden flex items-center justify-center"
             style={{
               maskImage: 'radial-gradient(circle at center, black 60%, transparent 100%)',
