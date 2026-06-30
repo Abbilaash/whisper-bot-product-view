@@ -1,19 +1,19 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { RoboticPuppy } from './RoboticPuppy';
 import { Sparkles, Zap, Heart } from 'lucide-react';
+import Link from 'next/link';
 
 export function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 px-4">
+    <section id="home" className="relative min-h-[85vh] flex items-center justify-center overflow-hidden pt-10 pb-16 px-4">
       {/* Gradient background elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-20 left-20 w-72 h-72 bg-purple-500/20 rounded-full blur-3xl animate-pulse" />
         <div className="absolute bottom-20 right-20 w-72 h-72 bg-pink-500/20 rounded-full blur-3xl animate-pulse" />
       </div>
 
-      <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-7xl mx-auto">
+      <div className="relative z-10 grid grid-cols-1 lg:grid-cols-[4.5fr_5.5fr] gap-12 items-center max-w-7xl mx-auto w-full">
         {/* Left Content */}
         <motion.div
           initial={{ opacity: 0, x: -50 }}
@@ -29,7 +29,7 @@ export function Hero() {
               className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-dark w-fit"
             >
               <Sparkles className="w-4 h-4 text-purple-400" />
-              <span className="text-sm text-purple-300">Internship Project 2026</span>
+              <span className="text-sm text-purple-300">NIT-K Internship Project 2026</span>
             </motion.div>
 
             <motion.h1
@@ -46,18 +46,9 @@ export function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.35 }}
-              className="text-base sm:text-lg text-purple-300 max-w-2xl balance-text leading-relaxed font-semibold"
+              className="text-lg sm:text-xl text-gray-400 max-w-2xl balance-text leading-relaxed"
             >
-              An intelligent AI powered vision and voice assisted bionic dog robot with advanced face detection, instant face learning, natural language understanding, real-time object tracking to spread AI awareness among school kids
-            </motion.p>
-
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.4 }}
-              className="text-lg sm:text-xl text-gray-300 max-w-md balance-text leading-relaxed"
-            >
-              An intelligent AI vision and voice assistant with advanced face detection, instant face learning, natural language understanding, and real-time object tracking.
+              An offline, autonomous robotic system combining local Speech-to-Text (STT), Semantic Intent Classification, Local RAG Q&A using a Small Language Model (SLM), Computer Vision, an interactive LeNet-5 CNN visualizer, and smart Bluetooth Audio connectivity.
             </motion.p>
           </div>
 
@@ -68,41 +59,43 @@ export function Hero() {
             transition={{ delay: 0.5 }}
             className="flex flex-wrap gap-4 pt-4"
           >
-            <button className="px-8 py-3 border border-purple-400 text-purple-300 font-semibold rounded-lg hover:bg-purple-500/10 transition-all duration-300">
-              Watch Demo
-            </button>
-          </motion.div>
-
-          {/* Stats */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.6 }}
-            className="grid grid-cols-3 gap-4 pt-8"
-          >
-            {[
-              { icon: <Zap className="w-5 h-5" />, label: 'AI Powered', value: 'v4.0' },
-              { icon: <Heart className="w-5 h-5" />, label: 'Emotional', value: '99%' },
-              { icon: <Sparkles className="w-5 h-5" />, label: 'Learning', value: '24/7' },
-            ].map((stat, i) => (
-              <div key={i} className="glass-dark p-4 rounded-lg">
-                <div className="text-purple-400 mb-2">{stat.icon}</div>
-                <p className="text-xs text-gray-400">{stat.label}</p>
-                <p className="text-lg font-bold text-white">{stat.value}</p>
-              </div>
-            ))}
+            <Link href="/docs">
+              <button className="px-8 py-3 border border-purple-400 text-purple-300 font-semibold rounded-lg hover:bg-purple-500/10 transition-all duration-300">
+                View Docs
+              </button>
+            </Link>
           </motion.div>
         </motion.div>
 
-        {/* Right 3D Model */}
+        {/* Right Preview Video */}
         <motion.div
           initial={{ opacity: 0, x: 50, scale: 0.9 }}
           animate={{ opacity: 1, x: 0, scale: 1 }}
           transition={{ duration: 0.8 }}
-          className="h-[500px] lg:h-[600px] relative"
+          className="relative flex items-center justify-center w-full"
         >
-          <RoboticPuppy />
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-slate-950 pointer-events-none" />
+          {/* Futuristic Glow behind the video */}
+          <div className="absolute w-[80%] h-[80%] bg-purple-500/20 rounded-full blur-3xl animate-pulse pointer-events-none" />
+          <div className="absolute w-[60%] h-[60%] bg-cyan-500/20 rounded-full blur-3xl animate-pulse pointer-events-none" style={{ animationDelay: '1s' }} />
+
+          {/* Seamless Blended Video Wrapper */}
+          <div 
+            className="w-full aspect-video relative z-10 overflow-hidden flex items-center justify-center"
+            style={{
+              maskImage: 'radial-gradient(circle at center, black 60%, transparent 100%)',
+              WebkitMaskImage: 'radial-gradient(circle at center, black 60%, transparent 100%)'
+            }}
+          >
+            <video
+              key="/wavego-preview-video1.mp4"
+              src="/wavego-preview-video1.mp4"
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="w-full h-full object-cover animate-fade-in"
+            />
+          </div>
         </motion.div>
       </div>
     </section>

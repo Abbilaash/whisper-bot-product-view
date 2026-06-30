@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Brain, Mic, Eye, Move3d } from 'lucide-react';
+import { Brain, Mic, Eye, Move3d, Cpu } from 'lucide-react';
 
 const features = [
   {
@@ -18,8 +18,8 @@ const features = [
   },
   {
     icon: Mic,
-    title: 'Natural Language Understanding',
-    description: 'Intelligent voice command processing with contextual understanding and semantic analysis',
+    title: 'Natural Language Understanding and Instant Learning',
+    description: 'Intelligent voice command processing with contextual understanding and semantic analysis. Learns new sentences instantly and applies it in real-time.',
     gradient: 'from-pink-500 to-red-500',
   },
   {
@@ -27,6 +27,12 @@ const features = [
     title: 'Object Detection & Tracking',
     description: 'Real-time identification and precise tracking of objects with continuous spatial awareness',
     gradient: 'from-green-500 to-emerald-500',
+  },
+  {
+    icon: Cpu,
+    title: 'LeNet-5 CNN Digit Visualizer',
+    description: 'Interactive character recognition exposing intermediate layer topology (Input [28x28], Conv1 activations [8x24x24], Pool1 [8x12x12], Conv2 [16x8x8], Pool2 [16x4x4]) and 16x16 Fully Connected weight mapping (256 dense inputs to 10 logits).',
+    gradient: 'from-blue-500 to-purple-500',
   },
 ];
 
@@ -52,7 +58,7 @@ export function Features() {
   };
 
   return (
-    <section className="py-20 px-4 relative overflow-hidden">
+    <section id="features" className="py-20 px-4 relative overflow-hidden">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <motion.div
@@ -65,7 +71,7 @@ export function Features() {
             Core Capabilities
           </h2>
           <p className="text-gray-300 text-lg max-w-2xl mx-auto balance-text">
-            Whisper-bot combines advanced computer vision and natural language processing for intelligent interaction
+            Whisper-bot combines computer vision and natural language processing for intelligent interaction
           </p>
         </motion.div>
 
@@ -82,7 +88,8 @@ export function Features() {
               <motion.div
                 key={index}
                 variants={itemVariants}
-                className="group glass-dark p-6 rounded-lg border border-white/10 hover:border-purple-500/50 transition-all duration-300 hover:shadow-lg"
+                className={`group glass-dark p-6 rounded-lg border border-white/10 hover:border-purple-500/50 transition-all duration-300 hover:shadow-lg relative overflow-hidden ${index === 4 ? 'md:col-span-2' : ''
+                  }`}
               >
                 {/* Icon Container */}
                 <div

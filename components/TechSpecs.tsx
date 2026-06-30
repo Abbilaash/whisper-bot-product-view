@@ -9,7 +9,7 @@ const specs = [
   },
   {
     category: 'Controller',
-    items: ['ESP32 DOWDQ6-v3', 'Motion control', 'Real-time processing'],
+    items: ['ESP32 DOWDQ6-v3', 'RT9166A-12/28PXL power chip', 'INA219 voltage monitor IC'],
   },
   {
     category: 'Sensors',
@@ -21,11 +21,11 @@ const specs = [
   },
   {
     category: 'AI Capabilities',
-    items: ['Face detection & recognition', 'Object detection & tracking', 'Voice command processing'],
+    items: ['Face detection & recognition', 'Colour detection & tracking', 'Voice command processing', 'NLP Processing and Semantic Vector search'],
   },
   {
     category: 'Power & Connectivity',
-    items: ['USB-C charging', 'WiFi enabled', 'Bluetooth support'],
+    items: ['USB-C charging', 'WiFi enabled', 'Bluetooth support', 'IPEX Antenna', '18650 Li-ion Supply'],
   },
 ];
 
@@ -50,7 +50,7 @@ export function TechSpecs() {
   };
 
   return (
-    <section className="py-20 px-4 relative overflow-hidden">
+    <section id="specs" className="py-20 px-4 relative overflow-hidden">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <motion.div

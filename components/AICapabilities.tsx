@@ -5,10 +5,10 @@ import Image from 'next/image';
 import { useState } from 'react';
 
 const previewImages = [
-  { id: 1, src: '/preview-1.png', alt: 'Face Detection Interface' },
-  { id: 2, src: '/preview-2.png', alt: 'Face Learning Mode' },
-  { id: 3, src: '/preview-3.png', alt: 'Voice Command Interface' },
-  { id: 4, src: '/preview-4.png', alt: 'Object Detection Tracking' },
+  { id: 1, src: '/preview-1.png', alt: 'Product Visual Looks' },
+  { id: 2, src: '/preview-2.png', alt: 'Motor Connection with ESP32-DOWDQ6' },
+  { id: 3, src: '/preview-3.png', alt: 'weight visualization of conv layer' },
+  { id: 4, src: '/preview-4.png', alt: 'neural network and neuron firing visulization with digit recognition' },
   { id: 5, src: '/preview-5.png', alt: 'Robot in Action' },
   { id: 6, src: '/preview-6.png', alt: 'Face Learning Database' },
   { id: 7, src: '/preview-7.png', alt: 'Object Classification' },
@@ -20,7 +20,7 @@ export function AICapabilities() {
   const [hoveredId, setHoveredId] = useState<number | null>(null);
 
   return (
-    <section className="py-20 px-4 relative overflow-hidden">
+    <section id="capabilities" className="py-20 px-4 relative overflow-hidden">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <motion.div
@@ -56,10 +56,10 @@ export function AICapabilities() {
                   src={image.src}
                   alt={image.alt}
                   fill
-                  className="object-cover"
+                  className="object-contain"
                 />
               </motion.div>
-              
+
               {/* Overlay on hover */}
               <motion.div
                 animate={{

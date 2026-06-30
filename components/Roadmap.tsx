@@ -7,7 +7,7 @@ import Image from 'next/image';
 const roadmapItems = [
   {
     version: 'v1.0',
-    status: 'pre-designed',
+    status: 'Pre-designed & Assembled',
     title: 'Open Source WaveGo Bionic Dog',
     image: '/v1-0-esp32-robot.png',
     items: [
@@ -19,21 +19,21 @@ const roadmapItems = [
   },
   {
     version: 'v1.2',
-    status: 'pre-designed',
+    status: 'Custom Built Software & Architecture',
     title: 'Raspberry Pi 4B Edge AI System',
     image: '/v1-2-raspberry-pi-robot.png',
     items: [
       'Raspberry Pi 4B processor',
       'Real-time AI inference',
       'Advanced computer vision',
-      'Edge processing capabilities',
+      'Edge computing capabilities',
     ],
   },
 ];
 
 export function Roadmap() {
   return (
-    <section className="py-20 px-4 relative overflow-hidden">
+    <section id="roadmap" className="py-20 px-4 relative overflow-hidden">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <motion.div
@@ -63,10 +63,10 @@ export function Roadmap() {
               {item.image && (
                 <div className="relative w-full h-80 mb-4 rounded-lg overflow-hidden border border-purple-500/30">
                   <Image
-                    src={item.image}
-                    alt={item.title}
-                    fill
-                    className="object-contain bg-gradient-to-b from-slate-800 to-slate-900"
+                     src={item.image}
+                     alt={item.title}
+                     fill
+                     className="object-contain bg-gradient-to-b from-slate-800 to-slate-900"
                   />
                 </div>
               )}
@@ -74,7 +74,7 @@ export function Roadmap() {
               {/* Status Badge */}
               <div className="mb-4 flex items-center gap-2">
                 <CheckCircle2 className="w-5 h-5 text-green-400" />
-                <span className="text-sm font-semibold text-green-400">Pre-designed & Assembled</span>
+                <span className="text-sm font-semibold text-green-400">{item.status}</span>
               </div>
 
               {/* Version */}
