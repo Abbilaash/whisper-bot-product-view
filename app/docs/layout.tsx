@@ -29,6 +29,7 @@ const docNavigation = [
   { name: 'Colored Ball Following', href: '/docs/colored-ball-following', icon: Target },
   { name: 'Bluetooth Integration', href: '/docs/bluetooth-speaker', icon: Bluetooth },
   { name: 'API Reference', href: '/docs/api-reference', icon: Terminal },
+  { name: 'Quick Start & Deployment', href: '/docs/deploy', icon: Terminal },
   { name: 'Troubleshooting & Debug', href: '/docs/debug', icon: AlertTriangle },
 ];
 
