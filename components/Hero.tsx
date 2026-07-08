@@ -22,15 +22,25 @@ export function Hero() {
           className="flex flex-col gap-6"
         >
           <div className="space-y-4">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2 }}
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-dark w-fit"
-            >
-              <Sparkles className="w-4 h-4 text-purple-400" />
-              <span className="text-sm text-purple-300">NIT-K Internship Project 2026</span>
-            </motion.div>
+            <div className="flex flex-col gap-2">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.2 }}
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-dark w-fit"
+              >
+                <Sparkles className="w-4 h-4 text-purple-400" />
+                <span className="text-sm text-purple-300">NIT-K Internship Project 2026</span>
+              </motion.div>
+              <motion.p
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.25 }}
+                className="text-xs text-purple-300/80 max-w-xl leading-relaxed italic"
+              >
+                Developed under the initiative: "Creating Awareness in the Field of Artificial Intelligence through Hands-on Activities for Secondary School Children in Selected Districts of Karnataka, Kerala and Tamil Nadu."
+              </motion.p>
+            </div>
 
             <motion.h1
               initial={{ opacity: 0, y: 20 }}

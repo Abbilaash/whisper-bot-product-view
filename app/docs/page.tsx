@@ -8,6 +8,17 @@ export default function OverviewPage() {
         The <strong>WaveGo Whisper Bot</strong> is an offline, autonomous robotic system that combines local Speech-to-Text (STT), Semantic Intent Classification, Retrieval-Augmented Generation (RAG) using a local Small Language Model (SLM), Computer Vision (Object, Face, and Handwriting Detection), and Bluetooth Audio connectivity.
       </p>
 
+      {/* Institutional Initiative Details */}
+      <div className="bg-purple-950/20 border border-purple-500/20 rounded-xl p-5 my-6">
+        <p className="text-2xs font-bold text-purple-400 uppercase tracking-widest mb-1.5">Main Program / Initiative</p>
+        <p className="text-slate-200 leading-relaxed text-sm font-semibold italic">
+          "Creating Awareness in the Field of Artificial Intelligence through Hands-on Activities for Secondary School Children in Selected Districts of Karnataka, Kerala and Tamil Nadu."
+        </p>
+        <p className="text-xs text-slate-400 mt-2 leading-relaxed">
+          Developed as part of the NIT-K Internship Project 2026 to design and deploy educational, hands-on bionic robotics and embedded AI models to secondary school students.
+        </p>
+      </div>
+
       <div className="border border-white/10 rounded-xl p-6 bg-slate-900/50 my-8">
         <h2 className="text-2xl font-bold text-white mb-4">Core Capabilities</h2>
         <ul className="list-disc pl-6 space-y-3 text-slate-300">

@@ -79,6 +79,32 @@ export default function DeployPage() {
         </div>
       </div>
 
+      {/* Mobile App Section */}
+      <div className="border border-white/10 rounded-xl p-6 bg-slate-900/40 space-y-4">
+        <h2 className="text-2xl font-bold text-purple-400 flex items-center gap-2">
+          <span>📱</span> Mobile Controller App
+        </h2>
+        <p className="text-sm text-slate-300 leading-relaxed">
+          Whisper-bot features a companion Flutter-based mobile dashboard for real-time video telemetry, drawing inputs for the LeNet-5 CNN digit recognizer, local Gemma3 chat interface, and bionic motor status polling.
+        </p>
+        <div className="p-4 bg-black/30 border border-white/5 rounded-lg space-y-3 max-w-md">
+          <h3 className="font-bold text-white text-sm">Download Android Client</h3>
+          <p className="text-xs text-slate-400">
+            Download the pre-compiled production release APK directly to your Android device:
+          </p>
+          <a 
+            href="/app-release.apk" 
+            download="whisper-bot-control.apk"
+            className="inline-flex items-center gap-2 text-sm bg-gradient-to-r from-purple-500 to-pink-500 text-white font-bold px-4 py-2.5 rounded-lg hover:opacity-90 transition-opacity duration-200 shadow-md shadow-purple-500/10 cursor-pointer"
+          >
+            <span>⬇️</span> Download app-release.apk
+          </a>
+          <p className="text-2xs text-slate-500 italic mt-1">
+            Build output size: ~57.0 MB • Requires Android 8.0 (Oreo) or higher.
+          </p>
+        </div>
+      </div>
+
       {/* Automated Installation Section */}
       <div className="border border-white/10 rounded-xl p-6 bg-slate-900/40 space-y-4">
         <h2 className="text-2xl font-bold text-purple-400 flex items-center gap-2">
