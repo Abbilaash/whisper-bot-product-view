@@ -36,7 +36,7 @@ export function Hero() {
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.25 }}
-                className="text-xs text-purple-300/80 max-w-xl leading-relaxed italic"
+                className="text-sm sm:text-base text-purple-200/90 max-w-3xl leading-relaxed font-medium italic"
               >
                 Developed under the initiative: "Creating Awareness in the Field of Artificial Intelligence through Hands-on Activities for Secondary School Children in Selected Districts of Karnataka, Kerala and Tamil Nadu."
               </motion.p>

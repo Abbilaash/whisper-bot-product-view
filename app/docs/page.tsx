@@ -10,11 +10,11 @@ export default function OverviewPage() {
 
       {/* Institutional Initiative Details */}
       <div className="bg-purple-950/20 border border-purple-500/20 rounded-xl p-5 my-6">
-        <p className="text-2xs font-bold text-purple-400 uppercase tracking-widest mb-1.5">Main Program / Initiative</p>
-        <p className="text-slate-200 leading-relaxed text-sm font-semibold italic">
+        <p className="text-xs font-bold text-purple-400 uppercase tracking-widest mb-1.5">Main Program / Initiative</p>
+        <p className="text-slate-100 leading-relaxed text-base sm:text-lg font-semibold italic">
           "Creating Awareness in the Field of Artificial Intelligence through Hands-on Activities for Secondary School Children in Selected Districts of Karnataka, Kerala and Tamil Nadu."
         </p>
-        <p className="text-xs text-slate-400 mt-2 leading-relaxed">
+        <p className="text-sm text-slate-300 mt-2 leading-relaxed">
           Developed as part of the NIT-K Internship Project 2026 to design and deploy educational, hands-on bionic robotics and embedded AI models to secondary school students.
         </p>
       </div>

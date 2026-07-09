@@ -10,8 +10,8 @@ const previewImages = [
   { id: 3, src: '/preview-3.png', alt: 'weight visualization of conv layer' },
   { id: 4, src: '/preview-4.png', alt: 'neural network and neuron firing visulization with digit recognition' },
   { id: 5, src: '/preview-5.png', alt: 'Robot in Action' },
-  { id: 6, src: '/preview-6.png', alt: 'Face Learning Database' },
-  { id: 7, src: '/preview-7.png', alt: 'Object Classification' },
+  { id: 6, src: '/preview-6.png', alt: 'Web Interface' },
+  { id: 7, src: '/preview-7.png', alt: 'Interactive chat interface' },
   { id: 8, src: '/preview-8.png', alt: 'System Architecture' },
   { id: 9, src: '/preview-9.png', alt: 'Control Dashboard' },
 ];
